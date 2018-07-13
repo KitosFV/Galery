@@ -38,7 +38,7 @@
                         }
                         $j++;
                         echo 
-                        "<td><figure class="sign">
+                        "<td><figure class=\"sign\">
                             <p><img src=\"images/$img\"></p>
                             <figcaption>$img</figcaption>
                         </figure></td>";
