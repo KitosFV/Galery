@@ -4,15 +4,15 @@
     </head>
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <body>
-        <h1>Galery</h1>
+        <h1 align="center">Galery</h1>
         <?php
         if(!is_dir('images')){
             mkdir('./images',0777);
         }
         $j = 0;
-        $width0 = 50;
+        $width0 = 175;
         ?>
-        <table>
+        <table align="center">
             <tr>
                 <?php
                 $images = scandir("./images");
