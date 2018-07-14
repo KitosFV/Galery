@@ -10,7 +10,7 @@
             mkdir('./images',0777);
         }
         $j = 0;
-        $scale = 1;
+        $width0 = 50;
         ?>
         <table>
             <tr>
@@ -36,10 +36,15 @@
                             echo "</tr><tr>";
                             $j=0;
                         }
-                        $j++;
+			$j++;
+			$data = getimagesize('./images/'.$img);
+			$width = $data[0];
+			$height = $data[1];
+			$mul = $width0 / $width;
+			$height = $mul * $height;
                         echo 
                         "<td><figure class=\"sign\">
-                            <p><img src=\"images/$img\"></p>
+                            <p><img src=\"images/$img\" width=\"$width0\" height=\"$height\"></p>
                             <figcaption>$img</figcaption>
                         </figure></td>";
                     }
